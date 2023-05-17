@@ -1,0 +1,24 @@
+﻿classes, interfaces, generics, and delegates:
+
+1. Define an interface called `IPlayable` that represents a playable character in a video game. It should include a method `Play()`.
+
+2. Create two classes that implement the `IPlayable` interface: `Warrior` and `Mage`. 
+These classes should provide their own implementations of the `Play()` method.
+
+3. Define a generic class called `GameManager<T>` that operates on playable characters of type `T` which implement the `IPlayable` interface. 
+This class should include a method `StartGame(T character)` that starts the game with the specified character.
+
+4. Create an instance of the `GameManager` class and use it to start the game with a `Warrior` character.
+
+5. Add a delegate called `GameEvent` that represents an event that can occur in the game. 
+This delegate should have a signature that matches the `Play()` method in the `IPlayable` interface.
+
+6. Create a class called `EventManager` that includes a method `RegisterEvent(GameEvent gameEvent)` to register game events and a method 
+`TriggerEvent()` that triggers all registered events.
+
+7. Create an instance of the `EventManager` class and register a game event for the `Mage` class.
+
+8. Implement a method `HandleEvent()` in the `Mage` class that matches the signature of the `GameEvent` delegate.
+
+9. Trigger the game event in the `EventManager` and ensure that the event is handled by the `Mage` class.
+
